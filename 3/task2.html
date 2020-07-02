@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+</head>
+
+<body>
+    <script>
+        "use stretch";
+        let i;
+        for (i = 1; i < 11; i++) {
+            if (i % 2 != 0) continue;
+            alert(i);
+        }
+
+        for (i = 1; i < 11; i++) {
+            if (i % 2 == 0) {
+                alert(i);
+            }
+        }
+        for (i = 1; i < 11; i++) {
+            switch (i) {
+                // case 1:
+                // case 3:
+                // case 5:
+                // case 7:
+                // case 9:
+                //     break;
+
+                case 2:
+                    alert(i);
+                    break;
+
+                case 4:
+                    alert(i);
+                    break;
+
+                case 6:
+                    alert(i);
+                    break;
+
+                case 8:
+                    alert(i);
+                    break;
+
+                case 10:
+                    alert(i);
+                    break;
+            }
+        }
+
+        function checkEven() {
+            if (i % 2 == 0) {
+                alert(i);
+            }
+        }
+
+        let n = prompt("Введите границу интервала", "10");
+
+        for (i = 1; i <= n; i++) {
+            checkEven(i)
+        }
+
+        function checkOdd() {
+            return (i % 2 == 1);
+        }
+
+        for (i = 1; i <= n; i++) {
+            if (!checkOdd(i)) {
+                alert(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

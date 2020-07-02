@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANKETA</title>
+</head>
+
+<body>
+    <script>
+        "use stretch";
+        let name;
+        do {
+            name = prompt("Ваше имя", "");
+
+            if (name === null || name.length > 15 || name.length < 2) {
+                alert("Некоректные данные");
+            }
+
+        } while (name === null || name.length > 15 || name.length < 2);
+
+
+        let surname;
+        do {
+            surname = prompt("Ваша фамилия", "");
+
+            if (surname === null || surname.length > 15 || surname.length < 2) {
+                alert("Некоректные данные");
+            }
+
+        } while (surname.length > 15 || surname.length < 2);
+
+
+        let patronymic;
+        do {
+            patronymic = prompt("Ваше отчество", "");
+
+            if (patronymic === null || patronymic.length > 15 || patronymic.length < 2) {
+                alert("Некоректные данные");
+            }
+
+        } while (patronymic === null || patronymic.length > 15 || patronymic.length < 2);
+
+
+        let age;
+        do {
+            age = +prompt("Ваш возраст", "");
+
+            if (isNaN(age) || age < 5 || age > 100) {
+                alert("Некоректные данные");
+            }
+        } while (isNaN(age) || age < 5 || age > 100);
+
+
+        let gender = confirm("Вы мужчина?");
+        if (gender == true) {
+            gender = "Мужской";
+        } else gender = "Женский";
+
+
+        let status_pension;
+        if (gender == "Мужской" && age > 61 || gender == "Женский" && age > 56) {
+            status_pension = "Да";
+        } else status_pension = "Нет";
+
+        alert(`
+        ВАШЕ ФИО: ${surname} ${name} ${patronymic}
+        ВАШ ВОЗРАСТ В ГОДАХ: ${age}
+        ВАШ ВОЗРАСТ В ДНЯХ: ${age * 365}
+        ЧЕРЕЗ 5 ЛЕТ ВАМ БУДЕТ: ${age + 5}
+        ПОЛ: ${gender}
+        ВЫ НА ПЕНСИИ: ${status_pension}`
+        );
+
+
+    </script>
+</body>
+
+</html>

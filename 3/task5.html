@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 5</title>
+</head>
+
+<body>
+    <script>
+        "use stretch";
+        let n = prompt("Введите границу интервала", "10");
+        NewPrice: for (let i = 2; i <= n; i++) {
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) continue NewPrice;
+            }
+            alert(i)
+        }
+    </script>
+</body>
+
+</html>

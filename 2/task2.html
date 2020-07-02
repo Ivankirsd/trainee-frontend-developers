@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+</head>
+
+<body>
+    <script>
+        "use stretch";
+        let name = prompt("Введите имя", "");
+        if (name == null) {
+            alert("Вход отменён");
+        } else if (name == "Админ") {
+            let password = prompt("Введите пароль", "");
+            if (password == null) {
+                alert("Вход отменён");
+            } else if (password == "Чёрный Властелин") {
+                alert("Добро пожаловать!")
+            } else alert ("Пароль неверен");
+        } else alert("Я вас не знаю");
+
+    </script>
+</body>
+
+</html>
